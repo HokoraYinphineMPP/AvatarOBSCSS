@@ -8,4 +8,4 @@ https://github.com/HokoraYinphineMPP/AvatarOBSCSS/assets/54823358/927d9df0-5a83-
 Copy the code from the template, then paste into your custom CSS field in your OBS browser source.
 Be sure to read the comments and add the user's UID and image!
 # If I fucked up
-Yell at me at [hokorayinphine](https://discord.com/users/221417731776446467 "This should link you to my Discord profile page popup! Hopefully...") ![](https://cdn.discordapp.com/emojis/444982290045599764.webp?size=16&quality=lossless ":siggy:")
+Yell at me at [hokorayinphine](https://discord.com/users/221417731776446467 "This should link you to my Discord profile page popup! Hopefully...") or make an issue here ![](https://cdn.discordapp.com/emojis/444982290045599764.webp?size=16&quality=lossless ":siggy:")
