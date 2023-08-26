@@ -1,0 +1,93 @@
+body, #root {
+  overflow: hidden !important;
+}
+[class*="Voice_voiceStates__"] {
+  display: flex;
+  align-items: flex-end;
+  padding: 56px;
+  padding-right: 600px;
+  float:right;
+}
+[class*="Voice_voiceState__"] {
+  height: auto;
+}
+[class*="Voice_avatar__"] {
+  filter: brightness(70%); /*When user not speaking, turn down brightness*/
+}
+[class*="Voice_avatarSpeaking__"] {
+  position: relative;
+  filter: brightness(100%); /*When user speaking, reset brightness to 100%*/
+  animation: 750ms alternate ease-in-out speak-jump,750ms infinite alternate ease-in-out speak-border; /*animate with speak-jump and speak-border*/
+  animation-duration: 300ms;
+}
+[class*="Voice_name__"] {
+  display: none;
+}
+
+img[src*="avatars"]
+{
+  width: auto;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 0;
+  border: none;
+  margin-right: -970px;
+  margin-top:-100px;
+  display:none; /*If user with no custom image joins VC, hide image*/
+}
+
+
+
+
+/*User 1 Name*/
+img[src*="avatars/IDNUMBERHERE"]/*Replace "IDNUMBERHERE" with the person 1's UID*/ {
+  content: url(IMAGEHERE);/*Replace "IMAGEHERE" with person 1's custom image*/
+  display:inline-block;
+}
+
+/*If User 1's image has a "speaking frame" (ie: mouth open), use this block. If else, go ahead and delete this*/
+img[class*="avatarSpeaking"][src*="IDNUMBERHERE"]/*Replace "IDNUMBERHERE" with the person 1's UID*/ {
+  content: url(IMAGEHERE);/*Replace "IMAGEHERE" with person 1's custom talking image*/
+  display:inline-block;
+}
+
+/*User 2 Name*/
+img[src*="avatars/IDNUMBERHERE"]/*Replace "IDNUMBERHERE" with the person 2's UID*/ {
+  content: url(IMAGEHERE);/*Replace "IMAGEHERE" with person 2's custom image*/
+  display:inline-block;
+}
+
+/*If User 2's image has a "speaking frame" (ie: mouth open), use this block. If else, go ahead and delete this*/
+img[class*="avatarSpeaking"][src*="IDNUMBERHERE"]/*Replace "IDNUMBERHERE" with the person 2's UID*/ {
+  content: url(IMAGEHERE);/*Replace "IMAGEHERE" with person 2's custom talking image*/
+  display:inline-block;
+}
+
+/*Repeat blocks above per user*/
+
+
+
+
+/*Animations below*/
+@keyframes speak-jump { /*Jump image up 10 pixels when speaking starts*/
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes speak-border { /*Give image white border when speaking*/
+  0% {
+    filter: drop-shadow(2px 2px 0px #FFFFFF) drop-shadow(-2px -2px 0px #FFFFFF) drop-shadow(-2px 2px 0px #FFFFFF) drop-shadow(2px -2px 0px #FFFFFF);
+  }
+  50% {
+    filter: drop-shadow(2px 2px 0px #FFFFFF) drop-shadow(-2px -2px 0px #FFFFFF) drop-shadow(-2px 2px 0px #FFFFFF) drop-shadow(2px -2px 0px #FFFFFF);
+  }
+  100% {
+    filter: drop-shadow(2px 2px 0px #FFFFFF) drop-shadow(-2px -2px 0px #FFFFFF) drop-shadow(-2px 2px 0px #FFFFFF) drop-shadow(2px -2px 0px #FFFFFF);
+  }
+}
